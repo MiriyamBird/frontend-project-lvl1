@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 15 14:16:06 2022
+# Make data base, printed on Tue Aug 16 10:49:33 2022
 
 # Variables
 
@@ -109,7 +109,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/2850_interop
+WSL_INTEROP = /run/WSL/8667_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -125,7 +125,7 @@ MAKE_VERSION := 4.3
 # environment
 _ = /home/mpanska/.vscode-server/bin/6d9b74a70ca9c7733b29f0456fd8195364076dda/node
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-8484b531-d6ac-4ca7-aeb4-974d4449de0e.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a1c05f2f-e9ba-46c1-b870-9520b6657075.sock
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -155,9 +155,9 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2064, inode 12036): 11 files, no impossibilities.
+# . (device 2064, inode 12036): 14 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -172,10 +172,17 @@ brain-games:
 #  recipe to execute (from 'Makefile', line 5):
 	node bin/brain-games.js
 
+lint:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 11):
+	npx eslint .
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-12 16:59:57.1487503
+#  Last modified 2022-08-15 17:53:34.8687503
 #  File has been updated.
 #  Successfully updated.
 
@@ -207,20 +214,20 @@ install:
 	npm ci
 
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/17=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/18=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 174 B / avg = 9 B
-# current buf: size = 8162 B / used = 174 B / count = 19 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 210 B / avg = 9 B
+# current buf: size = 8162 B / used = 210 B / count = 23 / avg = 9 B
 
-# strcache performance: lookups = 26 / hit rate = 26%
+# strcache performance: lookups = 31 / hit rate = 25%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=0/26=0%
-# Finished Make data base on Mon Aug 15 14:16:06 2022
+# Load=23/8192=0%, Rehash=0, Collisions=0/31=0%
+# Finished Make data base on Tue Aug 16 10:49:33 2022
 
  
 make: *** No rule to make target 'all'.  Stop.

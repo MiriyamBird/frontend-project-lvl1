@@ -9,3 +9,6 @@ publish: #publish
 
 lint: #lint
 	npx eslint .
+
+brain-even: #game
+	node bin/brain-even.js	

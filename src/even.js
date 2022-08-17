@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { showGreeting, userName, getRandomNumber} from './index.js';
+import { showGreeting, userName, getRandomNumber } from './index.js';
 
-const playGame = () => {
+const playEven = () => {
   showGreeting();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -9,7 +9,6 @@ const playGame = () => {
   let showCongratulations = 0;
 
   for (let i = 0; i < 3; i += 1) {
-
     const randomNumber = getRandomNumber();
 
     console.log(`Question: ${randomNumber}`);
@@ -37,4 +36,4 @@ const playGame = () => {
   }
 };
 
-export default playGame;
+export default playEven;

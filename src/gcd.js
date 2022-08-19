@@ -1,24 +1,34 @@
 import readlineSync from 'readline-sync';
 import { showGreeting, userName, getRandomNumber } from './index.js';
 
-const playEven = () => {
+const playGcd = () => {
   showGreeting();
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Find the greatest common divisor of given numbers.');
 
   let showCongratulations = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = getRandomNumber();
+    const num1 = getRandomNumber();
+    const num2 = getRandomNumber();
 
-    console.log(`Question: ${randomNumber}`);
+    console.log(`Question: ${num1} ${num2}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = () => {
-      if (randomNumber % 2 === 0) {
-        return 'yes';
+      let result = 0;
+      let x = num1;
+      let y = num2;
+
+      while (x !== 0 && y !== 0) {
+        if (x > y) {
+          x %= y;
+        } else {
+          y %= x;
+        }
       }
-      return 'no';
+      result = x + y;
+      return result;
     };
 
     if (Number(userAnswer) === correctAnswer()) {
@@ -36,4 +46,4 @@ const playEven = () => {
   }
 };
 
-export default playEven;
+export default playGcd;

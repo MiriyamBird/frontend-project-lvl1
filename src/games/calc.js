@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { showGreeting, userName, getRandomNumber } from './index.js';
+import { showGreeting, userName, getRandomNumber } from '../index.js';
 
 const playCalc = () => {
   showGreeting();

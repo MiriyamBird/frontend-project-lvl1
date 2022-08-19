@@ -19,7 +19,7 @@ const playProgression = () => {
     const progression = [];
     let nextNum = firstNum;
 
-    for (let l = 0; l < progressionLength; l += 1) {
+    for (let l = 0; l <= progressionLength; l += 1) {
       nextNum += step;
       progression.push(nextNum);
     }

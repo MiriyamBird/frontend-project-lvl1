@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 11:00:48 2022
+# Make data base, printed on Fri Aug 19 15:33:18 2022
 
 # Variables
 
@@ -109,7 +109,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/26652_interop
+WSL_INTEROP = /run/WSL/1065_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -125,7 +125,7 @@ MAKE_VERSION := 4.3
 # environment
 _ = /home/mpanska/.vscode-server/bin/6d9b74a70ca9c7733b29f0456fd8195364076dda/node
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a4aeac6c-0843-4168-b154-5d957e5077ed.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-b4eceea3-233d-4b87-ad2b-78252638e384.sock
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -165,6 +165,13 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Files
 
+fix:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 17):
+	npx eslint . --fix
+
 brain-games:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -182,7 +189,7 @@ lint:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-17 13:19:33.8187503
+#  Last modified 2022-08-19 13:21:04.9887503
 #  File has been updated.
 #  Successfully updated.
 
@@ -211,7 +218,7 @@ brain-even:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 14):
-	node bin/games/brain-even.js	
+	node bin/games/brain-even.js
 
 install:
 #  Implicit rule search has not been done.
@@ -221,19 +228,19 @@ install:
 	npm ci
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/20=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 24 / storage = 221 B / avg = 9 B
-# current buf: size = 8162 B / used = 221 B / count = 24 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 225 B / avg = 9 B
+# current buf: size = 8162 B / used = 225 B / count = 25 / avg = 9 B
 
-# strcache performance: lookups = 33 / hit rate = 27%
+# strcache performance: lookups = 35 / hit rate = 28%
 # hash-table stats:
-# Load=24/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Fri Aug 19 11:00:48 2022
+# Load=25/8192=0%, Rehash=0, Collisions=0/35=0%
+# Finished Make data base on Fri Aug 19 15:33:18 2022
 
  

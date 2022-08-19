@@ -9,17 +9,17 @@ const playProgression = () => {
   let showCongratulations = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    const minProgressionLength = 5;
-    const maxProgressionLength = 10;
-    const progressionLength = Math.round(Math.random() * (maxProgressionLength - minProgressionLength) + minProgressionLength);
+    const minProgLength = 5;
+    const maxProgLength = 10;
+    const progLength = Math.round(Math.random() * (maxProgLength - minProgLength) + minProgLength);
     const step = getRandomNumber();
     const firstNum = getRandomNumber();
-    const missingNumber = Math.round(Math.random() * progressionLength);
+    const missingNumber = Math.round(Math.random() * progLength);
 
     const progression = [];
     let nextNum = firstNum;
 
-    for (let l = 0; l <= progressionLength; l += 1) {
+    for (let l = 0; l <= progLength; l += 1) {
       nextNum += step;
       progression.push(nextNum);
     }

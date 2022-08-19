@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 // Знакомство
-export let userName;
+export const userName;
 
 // Приветствие
 export const showGreeting = () => {

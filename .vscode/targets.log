@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 15:33:18 2022
+# Make data base, printed on Fri Aug 19 16:14:52 2022
 
 # Variables
 
@@ -109,7 +109,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/1065_interop
+WSL_INTEROP = /run/WSL/3676_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -125,7 +125,7 @@ MAKE_VERSION := 4.3
 # environment
 _ = /home/mpanska/.vscode-server/bin/6d9b74a70ca9c7733b29f0456fd8195364076dda/node
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-b4eceea3-233d-4b87-ad2b-78252638e384.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-b4f759c4-6dd9-4a4f-b80d-9a861330bbe8.sock
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -155,9 +155,9 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2064, inode 12036): 14 files, no impossibilities.
+# . (device 2064, inode 12036): 13 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -189,7 +189,7 @@ lint:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-19 13:21:04.9887503
+#  Last modified 2022-08-19 16:14:41.6087503
 #  File has been updated.
 #  Successfully updated.
 
@@ -235,12 +235,12 @@ install:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 225 B / avg = 9 B
-# current buf: size = 8162 B / used = 225 B / count = 25 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 212 B / avg = 8 B
+# current buf: size = 8162 B / used = 212 B / count = 24 / avg = 8 B
 
-# strcache performance: lookups = 35 / hit rate = 28%
+# strcache performance: lookups = 34 / hit rate = 29%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Fri Aug 19 15:33:18 2022
+# Load=24/8192=0%, Rehash=0, Collisions=0/34=0%
+# Finished Make data base on Fri Aug 19 16:14:52 2022
 
  

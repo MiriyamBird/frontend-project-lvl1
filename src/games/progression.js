@@ -1,17 +1,13 @@
-import readlineSync from 'readline-sync';
-import { showGreeting, userName, getRandomNumber } from '../index.js';
+import { playGame } from '../../index.js';
 
-const playProgression = () => {
-  showGreeting();
+const playProgressionGame = () => {
+  const rules = 'What number is missing in the progression?';
 
-  console.log('What number is missing in the progression?');
-
-  let showCongratulations = 0;
-
-  for (let i = 0; i < 3; i += 1) {
-    const minProgLength = 5;
-    const maxProgLength = 10;
-    const progLength = Math.round(Math.random() * (maxProgLength - minProgLength) + minProgLength);
+  const startRound = () => {
+    const getRandomNumber = () => Math.round(Math.random() * 100);
+    const minLength = 5;
+    const maxLength = 10;
+    const progLength = Math.round(Math.random() * (maxLength - minLength) + minLength);
     const step = getRandomNumber();
     const firstNum = getRandomNumber();
     const missingNumber = Math.round(Math.random() * progLength);
@@ -29,22 +25,12 @@ const playProgression = () => {
 
     const progressionStr = progression.join(' ');
 
-    console.log(`Question: ${progressionStr}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const question = progressionStr;
 
-    if (Number(userAnswer) === correctAnswer) {
-      console.log('Correct!');
-      showCongratulations += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
+    return [question, correctAnswer];
+  };
 
-    if (showCongratulations === 3) {
-      console.log(`Congratulations, ${userName}!`);
-    }
-  }
+  playGame(rules, startRound);
 };
 
-export default playProgression;
+export default playProgressionGame;

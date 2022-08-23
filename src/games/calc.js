@@ -1,14 +1,11 @@
-import readlineSync from 'readline-sync';
-import { showGreeting, userName, getRandomNumber } from '../index.js';
+import { playGame } from '../../index.js';
 
-const playCalc = () => {
-  showGreeting();
+const playCalcGame = () => {
+  const rules = 'What is the result of the expression?';
 
-  console.log('What is the result of the expression?');
+  const startRound = () => {
+    const getRandomNumber = () => Math.round(Math.random() * 100);
 
-  let showCongratulations = 0;
-
-  for (let i = 0; i < 3; i += 1) {
     const operand1 = getRandomNumber();
     const operand2 = getRandomNumber();
 
@@ -16,33 +13,21 @@ const playCalc = () => {
     const randomIndex = Math.floor(Math.random() * operators.length);
     const randomOperator = operators[randomIndex];
 
-    const expression = `${operand1} ${randomOperator} ${operand2}`;
-
-    console.log(`Question: ${expression}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const question = (`${operand1} ${randomOperator} ${operand2}`);
 
     const correctAnswer = () => {
       if (randomIndex === 0) {
-        return (operand1 + operand2);
+        return (String(operand1 + operand2));
       } if (randomIndex === 1) {
-        return (operand1 - operand2);
+        return (String(operand1 - operand2));
       }
-      return (operand1 * operand2);
+      return (String(operand1 * operand2));
     };
 
-    if (Number(userAnswer) === correctAnswer()) {
-      console.log('Correct!');
-      showCongratulations += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer()}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
+    return [question, correctAnswer()];
+  };
 
-    if (showCongratulations === 3) {
-      console.log(`Congratulations, ${userName}!`);
-    }
-  }
+  playGame(rules, startRound);
 };
 
-export default playCalc;
+export default playCalcGame;

@@ -27,7 +27,7 @@ const playProgressionGame = () => {
 
     const question = progressionStr;
 
-    return [question, correctAnswer];
+    return [question, String(correctAnswer)];
   };
 
   playGame(rules, startRound);

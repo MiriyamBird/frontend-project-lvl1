@@ -1,4 +1,4 @@
-import { playGame } from '../../index.js';
+import playGame from '../../index.js';
 
 const playPrimeGame = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';

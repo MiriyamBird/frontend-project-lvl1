@@ -1,4 +1,4 @@
-import { playGame } from '../../index.js';
+import playGame from '../../index.js';
 
 const playProgressionGame = () => {
   const rules = 'What number is missing in the progression?';

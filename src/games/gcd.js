@@ -1,4 +1,4 @@
-import { playGame } from '../../index.js';
+import playGame from '../../index.js';
 
 const playGcdGame = () => {
   const rules = 'Find the greatest common divisor of given numbers.';

@@ -1,4 +1,4 @@
-import { playGame } from '../../index.js';
+import playGame from '../../index.js';
 
 const playCalcGame = () => {
   const rules = 'What is the result of the expression?';

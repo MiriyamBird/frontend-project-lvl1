@@ -30,4 +30,4 @@ const playGame = (rules, startRound) => {
   }
 };
 
-export {playGame};
+export default playGame;

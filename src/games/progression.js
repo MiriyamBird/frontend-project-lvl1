@@ -1,14 +1,14 @@
-import playGame from '../../index.js';
+import playGame from '../index.js';
+import getRandomNumber from '../random_number.js';
 
-const playProgressionGame = () => {
+export default () => {
   const rules = 'What number is missing in the progression?';
 
-  const startRound = () => {
-    const getRandomNumber = () => Math.round(Math.random() * 100);
+  const letProgression = () => {
     const minLength = 5;
     const maxLength = 10;
     const progLength = Math.round(Math.random() * (maxLength - minLength) + minLength);
-    const step = getRandomNumber();
+    const step = getRandomNumber(1, 20);
     const firstNum = getRandomNumber();
     const missingNumber = Math.round(Math.random() * progLength);
 
@@ -19,6 +19,12 @@ const playProgressionGame = () => {
       nextNum += step;
       progression.push(nextNum);
     }
+
+    return [progression, missingNumber];
+  };
+
+  const startRound = () => {
+    const [progression, missingNumber] = letProgression();
 
     const correctAnswer = progression[missingNumber];
     progression[missingNumber] = '..';
@@ -32,5 +38,3 @@ const playProgressionGame = () => {
 
   playGame(rules, startRound);
 };
-
-export default playProgressionGame;

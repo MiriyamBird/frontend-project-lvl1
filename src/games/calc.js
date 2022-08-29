@@ -1,11 +1,19 @@
 import playGame from '../index.js';
+import getRandomNumber from '../random_number.js';
 
-const playCalcGame = () => {
+export default () => {
   const rules = 'What is the result of the expression?';
 
-  const startRound = () => {
-    const getRandomNumber = () => Math.round(Math.random() * 100);
+  const calculate = (operand1, operand2, randomOperator) => {
+    if (randomOperator === '+') {
+      return (String(operand1 + operand2));
+    } if (randomOperator === '-') {
+      return (String(operand1 - operand2));
+    }
+    return (String(operand1 * operand2));
+  };
 
+  const startRound = () => {
     const operand1 = getRandomNumber();
     const operand2 = getRandomNumber();
 
@@ -15,19 +23,10 @@ const playCalcGame = () => {
 
     const question = (`${operand1} ${randomOperator} ${operand2}`);
 
-    const correctAnswer = () => {
-      if (randomIndex === 0) {
-        return (String(operand1 + operand2));
-      } if (randomIndex === 1) {
-        return (String(operand1 - operand2));
-      }
-      return (String(operand1 * operand2));
-    };
+    const correctAnswer = calculate(operand1, operand2, randomOperator);
 
-    return [question, correctAnswer()];
+    return [question, correctAnswer];
   };
 
   playGame(rules, startRound);
 };
-
-export default playCalcGame;

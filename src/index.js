@@ -8,8 +8,9 @@ const playGame = (rules, startRound) => {
   console.log(rules);
 
   let showCongratulations = 0;
+  const roundsCount = 3;
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = startRound();
 
     console.log(`Question: ${question}`);
@@ -21,12 +22,12 @@ const playGame = (rules, startRound) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return;
     }
+  }
 
-    if (showCongratulations === 3) {
-      console.log(`Congratulations, ${userName}!`);
-    }
+  if (showCongratulations === 3) {
+    console.log(`Congratulations, ${userName}!`);
   }
 };
 

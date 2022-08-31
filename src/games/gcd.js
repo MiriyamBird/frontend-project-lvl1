@@ -5,20 +5,22 @@ export default () => {
   const rules = 'Find the greatest common divisor of given numbers.';
 
   const findGcd = (num1, num2) => {
-    let result = 0;
-    let x = num1;
-    let y = num2;
+    num1 = Math.abs(num1);
+    num2 = Math.abs(num2);
+    let temp;
 
-    while (x !== 0 && y !== 0) {
-      if (x > y) {
-        x %= y;
-      } else {
-        y %= x;
-      }
+    if (num2 > num1) {
+      temp = num1;
+      num1 = num2;
+      num2 = temp;
     }
 
-    result = x + y;
-    return result;
+    while (true) {
+      if (num2 === 0) return num1;
+      num1 %= num2;
+      if (num1 === 0) return num2;
+      num2 %= num1;
+    }
   };
 
   const startRound = () => {

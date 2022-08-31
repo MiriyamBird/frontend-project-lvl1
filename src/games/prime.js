@@ -4,26 +4,19 @@ import getRandomNumber from '../random_number.js';
 export default () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const isPrime = (primeNumbers, randomNumber) => {
-    for (let i = 0; i < primeNumbers.length; i += 1) {
-      if (randomNumber === primeNumbers[i]) {
-        return 'yes';
+  const isPrime = (num) => {
+    for (let i = 2; i * i <= num; i += 1) {
+      if (num % i === 0) {
+        return false;
       }
     }
-    return 'no';
+    return num > 1;
   };
 
   const startRound = () => {
-    const primeNumbers = [
-      2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
-      43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,
-    ];
     const randomNumber = getRandomNumber();
-
     const question = randomNumber;
-
-    const correctAnswer = isPrime(primeNumbers, randomNumber);
-
+    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
     return [question, correctAnswer];
   };
 

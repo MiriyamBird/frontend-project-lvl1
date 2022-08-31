@@ -4,12 +4,7 @@ import getRandomNumber from '../random_number.js';
 export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const isEven = (randomNumber) => {
-    if (randomNumber % 2 === 0) {
-      return 'yes';
-    }
-    return 'no';
-  };
+  const isEven = (randomNumber) => (randomNumber % 2 === 0 ? 'yes' : 'no');
 
   const startRound = () => {
     const randomNumber = getRandomNumber();

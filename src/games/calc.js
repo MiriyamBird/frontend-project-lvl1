@@ -13,7 +13,7 @@ export default () => {
       case '*':
         return (String(operandOne * operandTwo));
       default:
-        throw new Error(`Unknown operator: '${randomOperator}'!`);
+        throw new Error(`Unknown operator: '${randomOperator}'`);
     }
   };
 

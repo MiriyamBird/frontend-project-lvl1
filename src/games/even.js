@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random_number.js';
+import getRandomNumber from '../randomNumber.js';
 
 export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';

@@ -1,31 +1,33 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random_number.js';
+import getRandomNumber from '../randomNumber.js';
 
 export default () => {
   const rules = 'What is the result of the expression?';
 
-  const calculate = (operand1, operand2, randomOperator) => {
+  const calculate = (operandOne, operandTwo, randomOperator) => {
     switch (randomOperator) {
       case '+':
-        return (String(operand1 + operand2));
+        return (String(operandOne + operandTwo));
       case '-':
-        return (String(operand1 - operand2));
+        return (String(operandOne - operandTwo));
+      case '*':
+        return (String(operandOne * operandTwo));
       default:
-        return (String(operand1 * operand2));
+        return "Unknown operator: '${randomOperator}'!";
     }
   };
 
   const startRound = () => {
-    const operand1 = getRandomNumber();
-    const operand2 = getRandomNumber();
+    const operandOne = getRandomNumber();
+    const operandTwo = getRandomNumber();
 
     const operators = ['+', '-', '*'];
     const randomIndex = getRandomNumber(0, operators.length - 1);
     const randomOperator = operators[randomIndex];
 
-    const question = (`${operand1} ${randomOperator} ${operand2}`);
+    const question = (`${operandOne} ${randomOperator} ${operandTwo}`);
 
-    const correctAnswer = calculate(operand1, operand2, randomOperator);
+    const correctAnswer = calculate(operandOne, operandTwo, randomOperator);
 
     return [question, correctAnswer];
   };

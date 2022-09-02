@@ -1,12 +1,12 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random_number.js';
+import getRandomNumber from '../randomNumber.js';
 
 export default () => {
   const rules = 'Find the greatest common divisor of given numbers.';
 
-  const findGcd = (num1, num2) => {
-    let x = Math.abs(num1);
-    let y = Math.abs(num2);
+  const findGcd = (numOne, numTwo) => {
+    let x = Math.abs(numOne);
+    let y = Math.abs(numTwo);
 
     while (y !== 0) {
       const temp = y;
@@ -17,12 +17,12 @@ export default () => {
   };
 
   const startRound = () => {
-    const num1 = getRandomNumber();
-    const num2 = getRandomNumber();
+    const numOne = getRandomNumber();
+    const numTwo = getRandomNumber();
 
-    const question = (`${num1} ${num2}`);
+    const question = (`${numOne} ${numTwo}`);
 
-    const correctAnswer = findGcd(num1, num2);
+    const correctAnswer = findGcd(numOne, numTwo);
 
     return [question, String(correctAnswer)];
   };
